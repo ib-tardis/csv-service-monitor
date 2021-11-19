@@ -13,12 +13,18 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>monitor-service</name>
     <description>monitor-service</description>
+    <packaging>jar</packaging>
     <properties>
         <java.version>11</java.version>
         <repackage.classifier/>
         <spring-native.version>0.10.5</spring-native.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>4.1</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
