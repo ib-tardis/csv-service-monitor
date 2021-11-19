@@ -65,6 +65,10 @@ public class MonitoringService {
             }
         }
 
+        if(lastN != null && lastN > 0){
+            healthStatusList = healthStatusList.subList(Math.max(healthStatusList.size() - lastN, 0), healthStatusList.size());
+        }
+
         if(status != null){
             healthStatusList = healthStatusList.stream()
                     .filter(h -> h.getStatus().equals(status.toUpperCase(Locale.ROOT))).collect(Collectors.toList());
